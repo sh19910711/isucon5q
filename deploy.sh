@@ -14,7 +14,7 @@ sudo nginx &
 
 -- webapp
 pushd ruby
-pkill ruby
+pkill rackup
 bundle install -j4
 RACK_ENV=production bundle exec rackup --host localhost --port 8080 &
 popd
