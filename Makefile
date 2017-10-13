@@ -1,3 +1,8 @@
+database:
+	echo "create database isucon5q;" | mysql -uroot
+	cat sql/schema.sql | mysql -uroot isucon5q
+	cat sql/dump.sql.gz | gunzip | mysql -uroot isucon5q
+
 deploy:
 	sh deploy.sh
 
